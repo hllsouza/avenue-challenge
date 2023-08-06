@@ -22,7 +22,7 @@ jobs:
 
       - name: Run Cypress
         run:
-          npx cypress run --project ./api --record --key $CYPRESS_RECORD_KEY
+          npx cypress run --project ./api --record --key $CYPRESS_RECORD_KEY --env CYPRESS_GROUP="API Test"
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
