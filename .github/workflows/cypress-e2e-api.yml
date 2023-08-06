@@ -17,9 +17,10 @@ jobs:
         with:
           install-command: yarn install
           browser: electron
+          working-directory: api
           record: true
           group: API E2E TEST
-          spec: api
+          spec: api/cypress/e2e/*
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
