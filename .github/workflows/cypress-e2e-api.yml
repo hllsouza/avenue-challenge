@@ -1,6 +1,6 @@
 name: Development e2e API
 
-on: [workflow_dispatch]
+on: [pull_request, workflow_dispatch]
 
 jobs:
   cypress-e2e-api-tests:
