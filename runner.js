@@ -8,7 +8,7 @@ require('dotenv').config();
 const tokenTesults = process.env.TESULTS_TOKEN;
 
 // Run Cypress tests using the command-line interface
-exec(`npx cypress run --config-file ${cypressConfigPath}`, (error, stdout, stderr) => {
+exec(`npx cypress run --project ${cypressConfigPath}`, (error, stdout, stderr) => {
   if (error) {
     console.error('Error running Cypress tests:', error);
     return;
