@@ -16,7 +16,6 @@ run({
 // specs to run here
 })
 .
-})
 then((results) => {
   
  
