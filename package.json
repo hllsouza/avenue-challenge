@@ -4,7 +4,7 @@
   "description": "Projeto de Testes de API do OpenWeather",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run"
+    "test": "npx cypress run --project ./api"
   },
   "keywords": [
     "cypress",
@@ -16,7 +16,8 @@
   "devDependencies": {
     "cypress": "^12.17.3",
     "cypress-plugin-api": "^2.11.1",
+    "cypress-tesults-reporter": "^1.4.1",
     "dotenv": "^16.3.1",
-    "cypress-tesults-reporter": "1.4.1"
+    "tesults": "^1.1.3"
   }
 }
