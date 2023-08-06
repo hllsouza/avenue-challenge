@@ -13,7 +13,7 @@ cypress.run({
 .then((results) => {
   const args = {
     target: tokenTesults,
-    config: cypressConfigFolder
+    config: cypressConfigPath
   }
   tesults.results(results, args);
 })
