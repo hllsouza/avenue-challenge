@@ -20,6 +20,7 @@ jobs:
           config-file: api/cypress.config.js
           record: true
           group: API E2E TEST
+          spec: api/cypress/e2e/weather.cy.js
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
