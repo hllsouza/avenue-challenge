@@ -10,17 +10,19 @@ jobs:
       options: --user 1001
     steps:
       - name: Checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3
 
-      - name: Cypress Run
-        uses: cypress-io/github-action@v5.0.0
+      - name: Set up Node
+        uses: actions/setup-node@v1
         with:
-          install-command: yarn install
-          browser: electron
-          config-file: api/cypress.config.js
-          record: true
-          group: API E2E TEST
-          spec: api/cypress/e2e/weather.cy.js
+          node-version: 16
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run Cypress
+        run:
+          npx cypress run --project ./src/tests/ --record --key $CYPRESS_RECORD_KEY
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
