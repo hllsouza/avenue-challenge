@@ -12,17 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3.3.0
 
-      - name: Install Dependencies
+      - name: Cypress Run
         uses: cypress-io/github-action@v5.0.0
         with:
           install-command: yarn install
           browser: electron
           record: true
           group: API E2E TEST
-
-      - name: Cypress Run
-        run:
-          npx cypress run --project ./api --key $CYPRESS_RECORD_KEY
+          spec: api
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
