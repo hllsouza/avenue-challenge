@@ -2,7 +2,7 @@ const cypress = require('cypress')
 const tesults = require('cypress-tesults-reporter');
 const path = require('path');
 
-const cypressConfigPath = path.resolve(__dirname, './api');
+const cypressConfigPath = path.join(__dirname, './api');
 
 require('dotenv').config()
 const tokenTesults = process.env.TESULTS_TOKEN
