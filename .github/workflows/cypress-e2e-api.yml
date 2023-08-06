@@ -12,17 +12,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set up Node
-        uses: actions/setup-node@v1
+      - name: Cypress Run
+        uses: cypress-io/github-action@v5
         with:
-          node-version: 16
-
-      - name: Install dependencies
-        run: yarn install
-
-      - name: Run Cypress
-        run:
-          npx cypress run --project ./api --record --key $CYPRESS_RECORD_KEY
+          install-command: yarn install
+          browser: electron
+          record: true
+          group: API Test
+          working-directory: api     
         env: 
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
