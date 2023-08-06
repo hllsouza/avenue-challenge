@@ -1,5 +1,6 @@
 const cypress = require('cypress')
 const tesults = require('cypress-tesults-reporter');
+const path = require('path');
 
 const cypressConfigPath = path.resolve(__dirname, './api');
 
