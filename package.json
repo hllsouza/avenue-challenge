@@ -4,10 +4,14 @@
   "description": "Projeto de Testes E2E visando API's e Web",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --project ./api",
-    "e2e:api": "npx cypress run --project ./api --record --tag 'api-weather' --spec api/cypress/e2e/*.cy.js",
-    "e2e:amazon": "npx cypress run --project ./web --record --tag 'web-amazon' --spec web/cypress/e2e/amazon.cy.js",
-    "e2e:avenue": "npx cypress run --project ./web --record --tag 'web-avenue' --spec web/cypress/e2e/avenue.cy.js"
+    "e2e:api:cloud": "npx cypress run --project ./api --record --tag 'api-weather' --spec api/cypress/e2e/*.cy.js",
+    "e2e:amazon:cloud": "npx cypress run --project ./web --record --tag 'web-amazon' --spec web/cypress/e2e/amazon.cy.js",
+    "e2e:avenue:cloud": "npx cypress run --project ./web --record --tag 'web-avenue' --spec web/cypress/e2e/avenue.cy.js",
+    "e2e:open:api": "npx cypress open --project ./api",
+    "e2e:open:web": "npx cypress open --project ./web",
+    "e2e:api:headless": "npx cypress run --project ./api --spec api/cypress/e2e/*.cy.js",
+    "e2e:amazon:headless": "npx cypress run --project ./web --spec web/cypress/e2e/amazon.cy.js",
+    "e2e:avenue:headless": "npx cypress run --project ./web --spec web/cypress/e2e/avenue.cy.js"
   },
   "keywords": [
     "cypress",
