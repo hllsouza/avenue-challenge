@@ -1,5 +1,6 @@
 
 module.exports = {
+  projectId: "ys1uyn",
   e2e: {
     baseUrl: 'https://www.amazon.com.br',
     env: {
