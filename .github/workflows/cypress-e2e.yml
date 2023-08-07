@@ -38,7 +38,7 @@ jobs:
 
         - name: Run Amazon Cypress Tests
           run:
-            npx cypress run --project ./web --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/amazon.cy.js" --env CYPRESS_GROUP="Amazon Test"
+            npx cypress run --project ./web --record --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/amazon.cy.js" --env CYPRESS_GROUP="Amazon Test"
           env: 
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -56,9 +56,9 @@ jobs:
         - name: Install dependencies
           run: yarn install
 
-        - name: Run Amazon Cypress Tests
+        - name: Run Avenue Cypress Tests
           run:
-            npx cypress run --project ./web --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/avenue.cy.js" --env CYPRESS_GROUP="Avenue Test"
+            npx cypress run --project ./web --record --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/avenue.cy.js" --env CYPRESS_GROUP="Avenue Test"
           env: 
             CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
