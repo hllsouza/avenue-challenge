@@ -6,8 +6,8 @@
   "scripts": {
     "test": "npx cypress run --project ./api",
     "e2e:api": "npx cypress run --project ./api --record --tag 'api-weather' --spec api/cypress/e2e/*.cy.js",
-    "e2e:amazon": "npx cypress run --project ./web --record --key --spec web/cypress/e2e/amazon.cy.js",
-    "e2e:avenue": "npx cypress run --project ./web --record --key --spec web/cypress/e2e/avenue.cy.js"
+    "e2e:amazon": "npx cypress run --project ./web --record --tag 'web-amazon' --spec web/cypress/e2e/amazon.cy.js",
+    "e2e:avenue": "npx cypress run --project ./web --record --tag 'web-avenue' --spec web/cypress/e2e/avenue.cy.js"
   },
   "keywords": [
     "cypress",
