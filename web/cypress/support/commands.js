@@ -53,7 +53,7 @@ Cypress.Commands.add('addProductsToCart', () => {
       const productPrice1 = parseFloat(price.replace('R$', '').replace(/\D/g, '').replace(',', '.').trim());
       cy.log(`Product Price 1: ${productPrice1}`);
       cy.get('#add-to-cart-button').click();
-      //cy.get('#attachSiNoCoverage').click();
+      cy.get('#attachSiNoCoverage').click();
       cy.get(".a-size-medium-plus.a-text-bold").should("contain", "Adicionado ao carrinho");
     });
   
