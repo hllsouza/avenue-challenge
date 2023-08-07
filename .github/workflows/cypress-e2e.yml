@@ -39,6 +39,7 @@ jobs:
           run: yarn install
 
         - name: Run Amazon Cypress Tests 🧪
+          uses: cypress-io/github-action@v5
           env: 
            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -60,6 +61,7 @@ jobs:
           run: yarn install
 
         - name: Run Avenue Cypress Tests 🧪
+          uses: cypress-io/github-action@v5
           env: 
            APP_ID: ${{ secrets.APP_ID }}
            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
