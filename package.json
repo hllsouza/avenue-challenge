@@ -4,7 +4,8 @@
   "description": "Projeto de Testes de API do OpenWeather",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run --project ./api"
+    "test": "npx cypress run --project ./api",
+    "e2e:api" "npx cypress run --project ./api --record --tag 'api-weather' --spec api/cypress/e2e/*.cy.js"
   },
   "keywords": [
     "cypress",
