@@ -1,7 +1,7 @@
 {
   "name": "openweather-cypress-api",
   "version": "1.0.0",
-  "description": "Projeto de Testes de API do OpenWeather",
+  "description": "Projeto de Testes E2E visando API's e Web",
   "main": "index.js",
   "scripts": {
     "test": "npx cypress run --project ./api",
