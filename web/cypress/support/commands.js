@@ -46,14 +46,14 @@ Cypress.Commands.add('verifiedErrorMessage', (seletor, message) => {
 });
 
 Cypress.Commands.add('addProductsToCart', () => {
-    cy.get("#twotabsearchtextbox").type("laptop{enter}");
+    cy.get("#twotabsearchtextbox").type("cadeira de escritorio{enter}");
     cy.get('span[data-version-id=v1wrz2ec84pu5g2uupkzlhtcvw8]').first().click();
   
     cy.get('#corePrice_feature_div .a-price .a-offscreen').invoke('text').then(price => {
       const productPrice1 = parseFloat(price.replace('R$', '').replace(/\D/g, '').replace(',', '.').trim());
       cy.log(`Product Price 1: ${productPrice1}`);
       cy.get('#add-to-cart-button').click();
-      cy.get('#attachSiNoCoverage').click();
+      //cy.get('#attachSiNoCoverage').click();
       cy.get(".a-size-medium-plus.a-text-bold").should("contain", "Adicionado ao carrinho");
     });
   
@@ -103,17 +103,6 @@ Cypress.Commands.add('testInternationalization', () => {
 });
 
 Cypress.Commands.add('testUsability', (seletor, txtSeletor, url) => {
-    //cy.get("#header_create_account").contains("Abra sua conta").click();
-    //cy.url().should("include", "/register/invitation?utm_source=header_create_account");
     cy.get(seletor).contains(txtSeletor).click();
     cy.url().should("include", url);
-
-    // cy.get("#header_account_login").contains("Acessar a conta").click();
-    // cy.url().should("include", "/login");
-
-    // cy.get("#header_banking").contains("Banking").click();
-    // cy.url().should("include", "/banking");
-
-    // cy.get('#header_relationship').contains("Atendimento").click();
-    // cy.url().should("include", "/atendimento")
 });
