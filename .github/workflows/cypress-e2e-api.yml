@@ -22,3 +22,43 @@ jobs:
           APP_ID: ${{ secrets.APP_ID }}
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  cypress-e2e-amazon-tests:
+      runs-on: ubuntu-latest
+      container: 
+        image: cypress/browsers:node18.12.0-chrome103-ff107
+        options: --user 1001
+      needs: [ cypress-e2e-api-tests ]
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        
+        - name: Install dependencies
+          run: yarn install
+
+        - name: Run Amazon Cypress Tests
+          run:
+            npx cypress run --project ./web --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/amazon.cy.js" --env CYPRESS_GROUP="Amazon Test"
+          env: 
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  cypress-e2e-avenue-tests:
+      runs-on: ubuntu-latest
+      container: 
+        image: cypress/browsers:node18.12.0-chrome103-ff107
+        options: --user 1001
+      needs: [ cypress-e2e-api-tests ]
+      steps:
+        - name: Checkout
+          uses: actions/checkout@v3
+        
+        - name: Install dependencies
+          run: yarn install
+
+        - name: Run Amazon Cypress Tests
+          run:
+            npx cypress run --project ./web --key $CYPRESS_RECORD_KEY --spec "web/cypress/e2e/avenue.cy.js" --env CYPRESS_GROUP="Avenue Test"
+          env: 
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
