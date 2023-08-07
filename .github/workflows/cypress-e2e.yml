@@ -1,4 +1,4 @@
-name: Development e2e Api/Web
+name: Development e2e Api-Web
 
 on: [pull_request, workflow_dispatch]
 
