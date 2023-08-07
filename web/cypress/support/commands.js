@@ -102,10 +102,18 @@ Cypress.Commands.add('testInternationalization', () => {
     cy.get("#header_relationship").contains("Servizio").should("not.exist");
 });
 
-Cypress.Commands.add('testUsability', () => {
-    cy.get("#header_banking").contains("Banking").click();
-    cy.url().should("include", "/banking");
+Cypress.Commands.add('testUsability', (seletor, txtSeletor, url) => {
+    //cy.get("#header_create_account").contains("Abra sua conta").click();
+    //cy.url().should("include", "/register/invitation?utm_source=header_create_account");
+    cy.get(seletor).contains(txtSeletor).click();
+    cy.url().should("include", url);
 
-    cy.get('#header_relationship').contains("Atendimento").click();
-    cy.url().should("include", "/atendimento")
+    // cy.get("#header_account_login").contains("Acessar a conta").click();
+    // cy.url().should("include", "/login");
+
+    // cy.get("#header_banking").contains("Banking").click();
+    // cy.url().should("include", "/banking");
+
+    // cy.get('#header_relationship').contains("Atendimento").click();
+    // cy.url().should("include", "/atendimento")
 });

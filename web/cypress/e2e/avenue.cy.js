@@ -11,8 +11,12 @@ describe("avenue", () => {
   });
 
   context("usability test", () => {
-    it("must navigate to different pages", () => {
-        cy.testUsability()
+    it("validate navigate create account", () => {
+        cy.testUsability('#header_create_account', 'Abra sua conta', '/register/invitation?utm_source=header_create_account')
+    });
+
+    it("validate navigate login account", () => {
+        cy.testUsability('#header_account_login', 'Acessar a conta', '/login')
     });
   });
 });
