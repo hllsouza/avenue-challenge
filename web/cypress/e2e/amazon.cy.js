@@ -55,7 +55,7 @@ describe("amazon", () => {
   });
 
   context("cart", () => {
-    it.only("must add products to cart and check the total amount", () => {
+    it("must add products to cart and check the total amount", () => {
       cy.addProductsToCart();
       cy.validateTotalPrice(); 
     });
