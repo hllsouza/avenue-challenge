@@ -56,7 +56,7 @@ Antes de rodar os testes, algumas variáveis de ambiente precisam ser configurad
 
 Faça uma cópia do [`.env.example`](./api/.env.example) como `.env.example`, e defina os valores apropriados para todas as variáveis. Não esqueça de tirar o `.example` do arquivo.
 
-**Observação:** O arquivo `.env.example` não é rastreado pelo git, pois está listado no arquivo `.gitignore`.
+**Observação:** O arquivo `.env` não é rastreado pelo git, pois está listado no arquivo `.gitignore`.
 
 ### Rodando os testes
 
