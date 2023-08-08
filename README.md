@@ -109,3 +109,18 @@ avenue-challenge/
  ├─ .gitignore
  └─ package.json
 ```
+
+## Dashboard de Automação de Testes
+
+<img width="1788" alt="Captura de Tela 2023-08-07 às 23 16 11" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/f3ea4a55-7e5c-4000-b7a1-c8c8b6beb4d7">
+
+<img width="1792" alt="Captura de Tela 2023-08-07 às 23 16 50" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/ef1f3bca-a2aa-45b4-ba5c-59c451472d8e">
+
+<img width="1789" alt="Captura de Tela 2023-08-07 às 23 17 26" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/53aca586-cb71-49dd-b3ee-9ade6fb07ae7">
+
+<img width="1785" alt="Captura de Tela 2023-08-07 às 23 17 52" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/87e54c2e-0f03-4f5e-ae91-abf6882aa4e8">
+
+<img width="1787" alt="Captura de Tela 2023-08-07 às 23 18 43" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/1188652a-3b98-4cbd-8e4d-835eeb0a8b1f">
+
+<img width="1786" alt="Captura de Tela 2023-08-07 às 23 19 11" src="https://github.com/hllsouza/avenue-challenge/assets/29413179/06625a1b-1845-4ba4-8992-a547ae73da6f">
+
